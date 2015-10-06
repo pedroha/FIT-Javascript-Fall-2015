@@ -17,6 +17,6 @@ Free Tutorials
 Games
 -----
 
-  * [Lightbot](http://lightbot.com/hocflash.html)
+  * [Lightbot](http://lightbot.com/hocflash.html) (Logic game)
   * [Codecombat](http://codecombat.com/) (Use Javascript Mode!)
 
