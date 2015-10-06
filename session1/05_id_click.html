@@ -1,0 +1,17 @@
+<html>
+
+<button id="clickable">Click Me by ID</button>
+
+<script>
+
+var clickMe = document.getElementById('clickable');
+
+clickMe.onclick = function(event) {
+	alert("hello by id: " + event.clientX 
+		+ "," + event.clientY);
+};
+
+</script>
+
+
+</html>

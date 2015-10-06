@@ -1,0 +1,45 @@
+<html>
+
+<h1>Calculator</h1>
+
+<p>
+  First Number: <input id="first-operand" value="9"></input>
+</p>
+<p>
+  Second Number: <input id="second-operand"></input>
+</p>
+
+<button id="compute">Compute</button>
+
+<p>
+  Sum: <input id="sum-result"></input>
+</p>
+<p>
+  Multiplication: <input id="multiplication-result"></input>
+</p>
+
+<script>
+
+var computeButton = document.getElementById('compute');
+var first = document.getElementById('first-operand');
+var second = document.getElementById('second-operand');
+var sumResult = document.getElementById('sum-result');
+
+computeButton.onclick = function() {
+	// var sum = first.value + second.value;
+	var sum = parseInt(first.value) + parseInt(second.value);
+
+	// alert(sum);
+	sumResult.value = sum;
+
+	//first.value = "This is the end of the world!!!";
+	//second.value = "Not really!!!";
+
+};
+
+
+</script>
+
+
+
+</html>

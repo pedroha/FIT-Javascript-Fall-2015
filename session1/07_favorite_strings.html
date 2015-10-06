@@ -1,0 +1,41 @@
+<html>
+
+<button id="clickable">Click Me by Id</button>
+
+<script>
+
+var clickMe = document.getElementById('clickable');
+
+clickMe.onclick = function() {
+
+	var favoriteFood = "apples, chocolate"; // This is ok: prompt("Favorite food?");
+	var sentence = "I love eating " + favoriteFood;
+
+	document.write(sentence);
+
+	document.write("<p>"
+		+ sentence
+		+ " contains "
+		+ sentence.length
+		+ " characters </p>");
+
+	var upper = sentence.toUpperCase();
+	document.write(upper + "<br/>");
+
+	var lower = sentence.toLowerCase();
+	document.write(lower + "<br/>");
+
+	var piece = sentence.substring(2, 10);
+	document.write(piece + "<br/>");
+	// alert(piece);
+
+	document.write(sentence.substr(2, 10) + "<br/>");
+
+	var substituted = sentence.replace(/[aeiou]/g, '');
+	// var substituted = sentence.replace('choco', '');
+
+	document.write(substituted + " " + substituted.length);
+};
+
+</script>
+</html>
