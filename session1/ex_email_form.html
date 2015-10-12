@@ -12,7 +12,7 @@
 		height: 100px;
 	}
 
-	form > div {
+	div {
 		margin: 10px;
 	}
 
@@ -20,7 +20,6 @@
 
 <h1>Email Form</h1>
 
-<form>
 	<div>Subject: <input id="subject"></input></div>
 	<div>From (name): <input id="from-name"></input></div>
 	<div>From (email): <input id="from-email"></input></div>
@@ -29,7 +28,6 @@
 	<div>
 	<button id="create-content">Create content</button>
 	</div>
-</form>
 
 
 <h2> Form Content</h2>
@@ -40,7 +38,20 @@
 	var create = document.getElementById('create-content');
 
 	create.onclick = function() {
-		alert("Create!");
+		alert("Create!");		
+
+		var subject = "Subject:" + document.getElementById('subject').value;
+		var fromName = document.getElementById('from-name').value;
+		var fromEmail = document.getElementById('from-email').value;
+		var from = "From: " + fromName + "<" + fromEmail + ">";
+		var toEmail = "To: " + document.getElementById('to-email').value;
+		var message  = "Message: " + document.getElementById('message').value;
+
+		var content = subject + "\n" + from + "\n" + toEmail + "\n" + message;
+
+		document.getElementById("email-form-content").value = content;
+
+		return false;
 	};
 
 </script>
