@@ -1,0 +1,28 @@
+Number of seconds: <input id="start-counter"></input>
+
+<h1 id="myTimer">Timer</h1>
+
+<script>
+
+	var seconds = 0;
+	var timer = document.getElementById('myTimer');
+
+	var showSeconds = function() {
+		seconds++;
+		timer.innerText = "Seconds passed: " + seconds;
+
+		if (seconds === 10) {
+			alert("10 seconds passed");
+		}
+	};
+
+	setInterval(showSeconds, 1000);
+
+	// Exercises
+	
+	// 1. Create a down counter, starting from the Integer value of 'start-counter' input
+	// 2. if (seconds < 0) alert('kaboom');
+	// 3. If the number of seconds is > 60, then display in the format hh:mm:ss
+	//    i.e. for 200 seconds: display "3:20" (3 minutes, 20 seconds and keep going down)
+
+</script>

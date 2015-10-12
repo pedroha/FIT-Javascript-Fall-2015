@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Spreadsheet table</title>
+</head>
+<body>
+
+	<h1>Spreadsheet table</h1>
+
+	<div id="spreadsheet"></div>
+
+	<script>
+
+		var letters =  new String("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+		var rows = 10;
+
+		var cells = []; // array of rows
+
+		for (var i = 0; i < rows; i++) {
+			cells[i] = [];
+			for (var j = 0; j < letters.length; j++) {
+				var value = letters.charAt(j) + i;
+				cells[i][j] = value;
+			}
+		}
+
+		var html = "<table>";
+		for (var i = 0; i < rows; i++) {
+			html += '<tr>';
+			for (var j = 0; j < letters.length; j++) {
+				html += '<td>' + cells[i][j] + '</td>';
+			}
+			html += '</tr>';
+		}
+		html += "</table>";
+
+		var spreadsheet = document.getElementById('spreadsheet');
+		spreadsheet.innerHTML = html;
+
+
+	</script>	
+</body>
+</html>
