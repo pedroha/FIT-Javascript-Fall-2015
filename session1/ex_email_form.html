@@ -1,17 +1,48 @@
 <html>
 
+<style type="text/css">
+	input, textarea {
+		position: absolute;
+		left: 160px;
+		margin-bottom: 20px;
+	}
+
+	textarea {
+		width: 200px;
+		height: 100px;
+	}
+
+	form > div {
+		margin: 10px;
+	}
+
+</style>
+
 <h1>Email Form</h1>
 
-<br/>Subject: <input id="subject"></input>
-<br/>From (name): <input id="from-name"></input>
-<br/>From (email): <input id="from-email"></input>
-<br/>To (email): <input id="to-email"></input>
-<br/>Message: <textarea id="message"></textarea>
+<form>
+	<div>Subject: <input id="subject"></input></div>
+	<div>From (name): <input id="from-name"></input></div>
+	<div>From (email): <input id="from-email"></input></div>
+	<div>To (email): <input id="to-email"></input></div>
+	<div>Message: <textarea id="message"></textarea></div>
+	<div>
+	<button id="create-content">Create content</button>
+	</div>
+</form>
 
-<br/>
-<button id="create-content">Create content</button>
 
 <h2> Form Content</h2>
 <textarea id="email-form-content"></textarea>
+
+<script>
+
+	var create = document.getElementById('create-content');
+
+	create.onclick = function() {
+		alert("Create!");
+	};
+
+</script>
 
 </html>
