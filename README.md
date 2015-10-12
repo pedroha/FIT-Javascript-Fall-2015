@@ -10,6 +10,7 @@ FIT. CTD 612. Javascript. Fall 2015
 
 ### Free Online Tutorials
 
+  * [Codecademy's Javascript](https://www.codecademy.com/tracks/javascript)
   * [Codeschool's Javascript Road Trip](https://www.codeschool.com/courses/javascript-road-trip-part-1)
   * [The New Boston (Javascript)](https://www.thenewboston.com/videos.php?cat=10)
 
@@ -18,4 +19,13 @@ FIT. CTD 612. Javascript. Fall 2015
 
   * [Lightbot](http://lightbot.com/hocflash.html) (Logic game)
   * [Codecombat](http://codecombat.com/) (Use Javascript Mode!)
+
+
+### Javascript Reference
+  * [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+  * [Learn X in Y minutes, Javascript](http://learnxinyminutes.com/docs/javascript/)
+
+
+### Programming Logic
+  * [Flow Chart](https://en.wikipedia.org/wiki/Flowchart)
 
