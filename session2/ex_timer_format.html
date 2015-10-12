@@ -1,4 +1,4 @@
-Number of seconds: <input id="start-counter"></input>
+Number of seconds: <input id="start-counter" value="90"></input>
 
 <h1 id="myTimer">Timer</h1>
 
@@ -9,7 +9,7 @@ Number of seconds: <input id="start-counter"></input>
 
 	var showSeconds = function() {
 		seconds++;
-		timer.innerText = "Seconds passed: " + seconds;
+		timer.innerText = "Time: " + seconds;
 
 		if (seconds === 10) {
 			alert("10 seconds passed");
