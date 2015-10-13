@@ -1,0 +1,25 @@
+Number of seconds: <input id="start-counter" value="90">
+
+<h1 id="myTimer">Timer</h1>
+
+<script>
+
+var seconds = 0;
+
+var timer = document.getElementById("myTimer");
+
+var showSeconds = function() {
+	seconds++;
+
+	timer.innerText = "Time: " + seconds;
+
+	if (seconds === 10) {
+		alert("10 seconds passed!");
+	}
+};
+
+// 1000 milliseconds = 1 second
+var period = 1000;
+setInterval(showSeconds, period); 
+
+</script>

@@ -1,0 +1,52 @@
+<html>
+
+	<h1>My Awesome TODO list</h1>
+
+	Task: <input id="task"></input>
+	<button id="add">Add to list</button>
+
+	<ul id="todo">
+		<li>Travel the world</li>
+	</ul>
+
+	<script>
+
+	var tasks = [
+		"Kill ebola",
+		"Win a nobel prize",
+		"Go to the Olympics"
+	];
+
+	var todo = document.getElementById("todo");
+
+	var addTask = function(potato) {
+		var item = document.createElement("li");
+		item.innerText = potato;
+		todo.appendChild(item);
+	};
+
+	for (var i = 0; i < tasks.length; i++) {
+		addTask(tasks[i]);
+	}
+
+	var add = document.getElementById("add");
+	var task = document.getElementById("task");
+
+	add.onclick = function() {
+		addTask(task.value);
+		// var item = document.createElement("li");
+		// item.innerText = task.value;
+		// todo.appendChild(item);		
+	}
+
+	</script>
+
+</html>
+
+
+
+
+
+
+
+

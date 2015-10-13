@@ -1,0 +1,38 @@
+<html>
+
+	<h1>My Awesome TODO list</h1>
+
+	<ul id="todo">
+		<li>Travel the world</li>
+	</ul>
+
+	<script>
+
+	// var tasks = [
+	// 	"Kill ebola",
+	// 	"Win a nobel prize",
+	// 	"Go to the Olympics"
+	// ];
+
+	var task1 = "Kill ebola";
+	var task2 = "Win a nobel prize";
+	var task3 = "Go to the Olympics";
+
+	var todo = document.getElementById("todo");
+
+	var item = document.createElement("li");
+	item.innerText = task1;
+	todo.appendChild(item);
+
+	item = document.createElement("li");
+	item.innerText = task2;
+	todo.appendChild(item);
+
+	item = document.createElement("li");
+	item.innerText = task3;
+	todo.appendChild(item);
+
+
+	</script>
+
+</html>
