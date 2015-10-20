@@ -1,0 +1,53 @@
+<html>
+<style>
+  
+	#square {
+		width: 200px;
+		height: 200px;
+		border: 20px solid red;
+		background-color: pink;
+		transition: 1s;
+	}
+
+	.circle {
+		border-radius: 500px;
+	}
+
+</style>
+
+<div id="square" ></div>
+
+<script>
+
+	var block = document.getElementById('square');
+
+	var isCircle = true;
+
+	var changeShape = function() {
+
+		if (isCircle) {
+			block.className = "circle";
+		}
+		else {
+			block.className = "";
+		}
+
+		isCircle = !isCircle; // Toggle boolean
+
+		// if (block.className === "") {
+		// 	block.className = "circle";
+		// }
+		// else {
+		// 	block.className = "";
+		// }
+	};
+
+	setInterval(changeShape, 1000);
+
+//	block.className = "circle";
+//	block.className = "";
+
+	// How can we animate and alternate classes using setTimeout()?
+
+</script>
+</html>
