@@ -1,0 +1,40 @@
+<style>
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: lime;
+	font-size: 60px;
+}
+
+</style>
+
+
+<div id="layer">
+	Click Me
+</div>
+
+<script>
+
+	var myLayer = document.getElementById('layer');
+
+	myLayer.onmousedown = function(event) {
+		console.log("mousedown");
+	};
+
+	myLayer.onmousemove = function(event) {
+		console.log("Mouse moving...");
+		console.log("Client x,y... " + event.clientX + "," + event.clientY);
+	};
+
+	myLayer.onmouseup = function(event) {
+		console.log("mouseup");
+	}
+
+
+</script>

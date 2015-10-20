@@ -1,0 +1,26 @@
+<input id="username" placeholder="Username"></input>
+
+<script>
+
+var myUserName = document.getElementById("username");
+
+myUserName.onkeydown = function(event) {
+	console.log("key down");
+};
+
+myUserName.onkeypress = function(event) {
+	console.log("key press", event);
+
+	var RETURN_KEY = 13;
+
+	if (event.keyCode === RETURN_KEY) {
+		alert("myUserName: " + myUserName.value);
+	}
+};
+
+myUserName.onkeyup = function(event) {
+	console.log("key up");
+}
+
+
+</script>

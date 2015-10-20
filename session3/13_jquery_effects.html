@@ -1,0 +1,35 @@
+<style>
+
+	.penguin {
+		border: 5px solid lime;
+	}
+	
+</style>
+
+
+<h1>Penguin</h1>
+
+<div class="penguin">
+	<img src="http://www.clker.com/cliparts/1/E/Y/3/3/N/tux-penguin.svg" width="200">
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+<script>
+
+var effects = function() {
+	$('.penguin').fadeOut();
+	$('.penguin').fadeIn();
+	$('.penguin').slideUp();
+	$('.penguin').slideDown();
+};
+
+for (var i = 0; i < 5; i++) {
+	effects();
+}
+
+</script>
+
+
+

@@ -1,0 +1,13 @@
+<a id="link" href="http://www.microsoft.com">Let's go to Microsoft.</a>
+
+<script>
+	var myLink = document.getElementById('link');
+
+	myLink.onclick = function(e) {
+		alert("Let's make pasta!");
+		
+		window.location = "http://www.google.com";
+		
+		return false; // prevent default action
+	};
+</script>
