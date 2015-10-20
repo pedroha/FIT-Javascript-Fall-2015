@@ -24,6 +24,7 @@ FIT. CTD 612. Javascript. Fall 2015
 ### Javascript Reference
   * [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   * [Learn X in Y minutes, Javascript](http://learnxinyminutes.com/docs/javascript/)
+  * [Try jquery](http://try.jquery.com/)
 
 
 ### Programming Logic
