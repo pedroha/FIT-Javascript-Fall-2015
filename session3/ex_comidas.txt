@@ -1,0 +1,142 @@
+Using an array:
+var foods = ["Empanadas", "Milanesas", "Asado"];
+
+Use jquery! Hint: $.html()
+
+Produce the following output:
+
+
+------
+Step 1
+------
+<div id="container">
+	<h1>Empanadas</h1>
+	<h1>Milanesas</h1>
+	<h1>Asado</h1>
+</div>
+
+------
+Step 2
+------
+<div id="container">
+	<h1>Empanadas</h1>
+	<h2>Milanesas</h2>
+	<h3>Asado</h3>
+</div>
+
+------
+Step 3
+------
+<div id="container">
+	<h3>Empanadas</h3>
+	<h2>Milanesas</h2>
+	<h1>Asado</h1>
+</div>
+
+
+------
+Step 4
+------
+
+Add another loop to produce the following output:
+
+<script>
+	var foods = ["Empanadas", "Milanesas", "Asado"];
+	var desserts = ["Ice-cream", "Tiramisu", "Brownie"];
+</script>
+
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h1>Milanesas</h1>
+	<h1>Asado</h1>
+  <div>
+
+  <div>
+	<h1>Ice-cream</h1>
+	<h1>Tiramisu</h1>
+	<h1>Brownie</h1>
+  <div>
+</div>
+
+
+------
+Step 5
+------
+
+How about the same output, with this input:
+
+var foods = ["Empanadas", "Milanesas", "Asado", "Ice-cream", "Tiramisu", "Brownie"];
+
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h1>Milanesas</h1>
+	<h1>Asado</h1>
+  <div>
+
+  <div>
+	<h1>Ice-cream</h1>
+	<h1>Tiramisu</h1>
+	<h1>Brownie</h1>
+  <div>
+</div>
+
+------
+Step 6
+------
+
+var foods = ["Empanadas", "Milanesas", "Asado", "Ice-cream", "Tiramisu", "Brownie"];
+var groupCount = 2;
+
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h2>Milanesas</h2>
+	<h3>Asado</h3>
+  <div>
+
+  <div>
+	<h1>Ice-cream</h1>
+	<h2>Tiramisu</h2>
+	<h3>Brownie</h3>
+  <div>
+</div>
+
+
+------
+Step 7
+------
+
+var foods = ["Empanadas", "Milanesas", "Asado", "Ice-cream", "Tiramisu", "Brownie"];
+var groupCount = 3;
+
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h2>Milanesas</h2>
+  </div>
+
+  <div>
+	<h3>Asado</h3>
+	<h1>Ice-cream</h1>
+  </div>
+
+  <div>
+	<h2>Tiramisu</h2>
+	<h3>Brownie</h3>
+  <div>
+</div>
+
+
+------
+Step 8
+------
+
+Same as in step 7, but get the inputs from an HTML form:
+
+<textarea id="foods">Empanads, Milanesas, Asado, Ice-cream, Tiramisu, Brownie</textarea>
+<input id="groupCount">3</input>
+
+Hint: String.split(", ")
+

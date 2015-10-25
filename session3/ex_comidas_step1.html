@@ -1,0 +1,15 @@
+<div id="container">
+</div>
+
+<script src="jquery-2.1.4.js"></script>
+
+<script>
+
+	var foods = ["Empanadas", "Milanesas", "Asado"];
+
+	for (var i = 0; i < foods.length; i++) {
+		var html = "<h1>" + foods[i] + "</h1>";
+		$('#container').append(html);
+	}
+
+</script>

@@ -1,0 +1,29 @@
+<html>
+<style>
+	label {
+		display: block;
+	}
+</style>
+<body>
+
+<label>Monthly salary</label><input id="monthly-salary"></input>
+<label>Monthly expenses</label><input id="monthly-expenses"></input>
+<label><b>Monthly savings</b></label><input id="monthly-savings"></input>
+
+<label>Number of months</label><input id="number-of-months"></input>
+<label><b>Total savings</b></label><input id="total-savings"></input>
+
+<button id="compute-total">Compute Total Savings</button>
+
+<script src="jquery-2.1.4.js"></script>
+
+<script>
+
+	$('#compute-total').on('click', function() {
+		alert('Compute total here!');
+	});
+
+</script>
+
+</body>
+</html>

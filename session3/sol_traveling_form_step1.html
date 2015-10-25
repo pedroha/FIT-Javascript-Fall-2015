@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<select id="destination">
+	<option value="disney">Miami, Disney</option>
+	<option value="eiffel">Paris, Tour Eiffel</option>
+	<option value="michel">Mont St Michel</option>
+</select>
+
+<input id="cost" value="0.00"></input>
+
+<script src="jquery-2.1.4.js"></script>
+
+<script>
+
+	var pricing = {
+		"disney": "1000",
+		"eiffel": "2000",
+		"michel": "3000"		
+	};
+
+	$('#destination').on('change', function() {
+		var place = $('#destination').val();
+		console.log(place);
+
+		var price = pricing[place];
+		
+		$('#cost').val(price);
+	})
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+=====
+Step 1
+
+Create the HTML for the following:
+
+Destination <select> with 3 options:
+	Miami, Disney (value = "disney")
+	Paris, Tour Eiffel (value = "eiffel")
+	Normandy, Mont St Michel (value = "michel")
+
+And one input text for Cost (id = "cost")
+
+Then write the Javascript so that when the user selects an option, the Cost field is updated according to the following table:
+
+Update:
+	"disney": "1000"
+	"eiffel": "2000"
+	"michel": "3000"
+
+=====
+Step 2
+
+Add the following input fields:
+Monthly salary
+Monthly expenses
+Monthly savings (salary - expenses)
+Number of months:
+Total savings: number of months x (monthly savings)
+
+Button "Compute Total Savings": when clicked, it computes the Monthly savings and the total savings.
+
+=====
+Step 3
+
+Add: <h1>Can I travel <span id="can-travel">Yes</span></h1>
+
+Add another button "Can I travel?"
+
+When clicked, if the Cost <= Total Savings, then display "YES" in the span "can-travel". Otherwise, display "NO".
+
+=====
+Step 4
+
+Add the following checkboxes:
+
+[ ] Permission from mom
+[ ] Good weather on flying day
+[ ] Won the jackpot for $300 million dollars
+[ ] Jailed for tax evasion
+[ ] Great connections
+
+Now, display "YES" or "NO" according to the following rules.
+
+a) Cost <= Total Savings OR Won the jackpot
+b) You need permission from mom and good weather
+c) You can't go if you are jailed unless you have great connections.

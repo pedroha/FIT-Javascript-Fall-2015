@@ -1,0 +1,48 @@
+<html>
+<style>
+	label {
+		display: block;
+	}
+</style>
+
+<body>
+
+<select id="destination">
+	<option value="disney">Miami, Disney</option>
+	<option value="eiffel">Paris, Tour Eiffel</option>
+	<option value="normandy">Mont St Michel</option>
+</select>
+
+<input id="cost" value="0.00"></input>
+
+
+<label>Monthly salary</label><input id="monthly-salary"></input>
+<label>Monthly expenses</label><input id="monthly-expenses"></input>
+<label><b>Monthly savings</b></label><input id="monthly-savings"></input>
+
+<label>Number of months</label><input id="number-of-months"></input>
+<label><b>Total savings</b></label><input id="total-savings"></input>
+
+<button id="compute-total">Compute Total Savings</button>
+
+<h1><button id="travel">Can I travel?</button> <span id="can-travel">Yes</span></h1>
+
+
+<script src="jquery-2.1.4.js"></script>
+
+
+<script>
+
+	$('#destination').on('change', function() {
+		alert("Hey there!");
+	});
+
+	$('#travel').on('click', function() {
+		alert('find out if I can travel');
+	})
+
+</script>
+
+</body>
+</html>
+
