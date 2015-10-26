@@ -51,6 +51,7 @@
 
 <div class="section">
 	<h1><button id="travel">Can I travel?</button> <span id="can-travel">Yes</span></h1>
+	<p id="reason"></p>
 </div>
 
 
@@ -63,9 +64,13 @@
 		alert("Hey there!");
 	});
 
+
 	$('#travel').on('click', function() {
-		alert('find out if I can travel');
-	})
+		var momIsNice = $('#mom').is(':checked');
+		console.log(momIsNice);
+
+		alert('find out if I can travel? ' + momIsNice);
+	});
 
 </script>
 

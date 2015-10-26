@@ -64,8 +64,11 @@
 	});
 
 	$('#travel').on('click', function() {
-		alert('find out if I can travel');
-	})
+		var momIsNice = $('#mom').is(':checked');
+		console.log(momIsNice);
+
+		alert('find out if I can travel? ' + momIsNice);
+	});
 
 </script>
 
