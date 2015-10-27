@@ -13,14 +13,24 @@
 
 	<script>
 
+        var image = new Image();
+
+
     	var canvas = document.getElementById("drawing");
     	var c = canvas.getContext("2d");
 
-        c.fillStyle = "#eee";
-        c.fillRect(0, 0, 600, 400);
+        image.src = "http://uploads6.wikiart.org/images/leonardo-da-vinci/mona-lisa.jpg";
+
+        image.onload = function() {
+            c.fillStyle = "#eee";
+            c.fillRect(0, 0, 600, 400);
+
+            var ratio = image.width / image.height;
+            c.drawImage(image, 0, 0, 600 * ratio, 400);
+        };
 
         var currentBrushStyle = {
-            color :     'lime', /* '#a7f', */
+            color :     '#a7f', /* '#a7f', */
             width :     25,
             lineCap:    "round",
             lineJoin:   "round",
@@ -39,6 +49,8 @@
             startStroke: function(x, y) {
                 c.beginPath();
                 c.moveTo(x, y);
+
+                brush.stroke(x, y);
             },
             stroke: function(x, y) {
                 var dist = 1;
