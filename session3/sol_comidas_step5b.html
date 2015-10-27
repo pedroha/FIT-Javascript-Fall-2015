@@ -1,0 +1,46 @@
+<div id="container">
+</div>
+
+<script src="jquery.js"></script>
+
+<script>
+
+	var foods = ["Empanadas", "Milanesas", "Asado", "Ice-cream", "Tiramisu", "Brownie"];
+
+	var fullHtml = "";
+	var count = 3;
+	var pieceLength = (foods.length/count);
+
+	for (var j = 0; j < count; j++) {
+		var offset = j * pieceLength;
+
+		fullHtml += "<div>";
+		for (var i = offset; i < offset + pieceLength; i++) {
+			var html = "<h1>" + foods[i] + "</h1>";
+			fullHtml = fullHtml + html;
+		}
+		fullHtml += "</div>";
+	}
+
+	$('#container').append(fullHtml);
+
+
+</script>
+
+<!-- 
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h1>Milanesas</h1>
+	<h1>Asado</h1>
+  <div>
+
+  <div>
+	<h1>Ice-cream</h1>
+	<h1>Tiramisu</h1>
+	<h1>Brownie</h1>
+  <div>
+</div>
+ -->
+
+

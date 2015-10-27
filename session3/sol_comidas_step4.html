@@ -1,0 +1,48 @@
+<div id="container">
+</div>
+
+<script src="jquery.js"></script>
+
+<script>
+
+	var foods = ["Empanadas", "Milanesas", "Asado"];
+	var desserts = ["Ice-cream", "Tiramisu", "Brownie"];
+
+	// Foods
+	var fullHtml = "<div>";
+	for (var i = 0; i < foods.length; i++) {
+		var html = "<h1>" + foods[i] + "</h1>";
+		fullHtml = fullHtml + html;
+	}
+	fullHtml += "</div>";
+
+	// Desserts
+	fullHtml += "<div>";
+	for (var i = 0; i < desserts.length; i++) {
+		var html = "<h1>" + desserts[i] + "</h1>";
+		fullHtml += html;
+	}
+	fullHtml += "</div>";
+
+	$('#container').append(fullHtml);
+
+
+</script>
+
+<!-- 
+<div id="container">
+  <div>
+	<h1>Empanadas</h1>
+	<h1>Milanesas</h1>
+	<h1>Asado</h1>
+  <div>
+
+  <div>
+	<h1>Ice-cream</h1>
+	<h1>Tiramisu</h1>
+	<h1>Brownie</h1>
+  <div>
+</div>
+ -->
+
+
