@@ -1,0 +1,108 @@
+<html>
+
+<ul id="movies">
+</ul>
+
+
+<script src="jquery.js"></script>
+<script>
+
+	// Step 1
+	var movie = {
+		title: "Black and White | A Mickey Mouse Cartoon | Disney Shorts",
+		code: "SF_hfyIvids"
+	};
+
+	// Step 2
+	var movies = [{
+		title: "Teenage Mutant Ninja Turtles",
+		code: "6SjE141En2g"
+	},
+	{
+		title: "LOONEY TUNES",
+		code: "vlCW7P0cZIY"
+	},
+	{
+		title: "Disney Movies 2015",
+		code: "qbNvL6Qggi0"
+	}];
+
+
+
+</script>
+
+
+
+<pre>
+
+======
+Step 1
+
+Using templating technique, produce the following HTML:
+<xmp>
+<ul id="movies">
+  <li>
+	<h2>Black and White | A Mickey Mouse Cartoon | Disney Shorts</h2>
+
+	<iframe width="300" src="https://www.youtube.com/embed/SF_hfyIvids" frameborder="0" allowfullscreen></iframe>
+  </li>
+</ul>
+</xmp>
+
+given an object movie:
+
+var movie = {
+	title: "Black and White | A Mickey Mouse Cartoon | Disney Shorts",
+	code: "SF_hfyIvids"
+};
+
+
+======
+Step 2
+
+Let's try with an array of movies:
+
+var movies = [{
+	title: "Teenage Mutant Ninja Turtles",
+	code: "6SjE141En2g"
+}, {
+	title: "LOONEY TUNES",
+	code: "vlCW7P0cZIY"
+}, {
+	title: "Disney Movies 2015",
+	code: "qbNvL6Qggi0"
+}];
+
+
+======
+Step 3
+
+a) Now choose your own youtube movies
+b) Add some nice CSS styling
+
+
+=====
+Extra
+
+How about getting movies from vimeo?
+
+<xmp>
+<iframe src="https://player.vimeo.com/video/143703730" width="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</xmp>
+
+</pre>
+
+
+
+<h1> Youtube </h1>
+
+<iframe width="300" src="https://www.youtube.com/embed/SF_hfyIvids" frameborder="0" allowfullscreen></iframe>
+
+<h1> Vimeo </h1>
+
+<iframe src="https://player.vimeo.com/video/143703730" width="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/143703730">Escargore</a> from <a href="https://vimeo.com/mdsnz">Media Design School</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+</html>
+
+
