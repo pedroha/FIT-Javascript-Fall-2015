@@ -1,0 +1,30 @@
+<ul id="books">
+	
+</ul>
+
+<script src="jquery.js"></script>
+
+<script>
+
+	var book = {
+		title: 'A Smarter Way to Learn Javascript',
+		image: 'http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg'
+	};
+
+	var book2 = {
+		title: 'Javascript for Beginners',
+		image: 'http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg'
+	};
+
+	var template = '<li><h1>$title</h1> <img src="$image-src"></li>';
+
+	var content = template.replace('$title', book.title).replace('$image-src', book.image);
+
+	var content2 = template.replace('$title', book2.title).replace('$image-src', book2.image);
+
+	$('#books').append(content);
+	$('#books').append(content2);
+
+</script>
+
+

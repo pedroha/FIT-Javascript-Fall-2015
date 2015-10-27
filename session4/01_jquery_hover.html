@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover</title>
+	<style>
+		
+		.layer {
+			width: 200px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: pink;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+	</style>
+
+	<script src="jquery.js"></script>
+</head>
+
+<body>
+
+	<h1>Hovering</h1>
+
+	<div id="my-layer" class="layer"></div>
+	
+	<script>
+
+		$layer = $('#my-layer');
+
+		$layer.on('mouseenter', function() {
+			$layer.removeClass();
+			$layer.addClass('layer red');
+		});
+
+		$layer.on('mouseleave', function() {
+			$layer.removeClass();
+			$layer.addClass('layer blue');
+		});
+
+		/*
+			// Only works in IE
+
+		var layer = document.getElementById('layer');
+
+		layer.onmouseenter = function() {
+			layer.className = "layer red";
+		};
+
+		layer.onmouseleave = function() {
+			layer.className = "layer blue";
+		};
+		*/
+
+	</script>
+</body>
+</html>
+

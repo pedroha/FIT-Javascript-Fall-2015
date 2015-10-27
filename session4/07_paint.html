@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Painting on canvas</title>
+</head>
+<body>
+    
+    <div class="page">
+    	<canvas id="drawing" width="600" height="400">No CANVAS support!!</canvas>
+	</div>
+
+	<script>
+
+        var image = new Image();
+
+
+    	var canvas = document.getElementById("drawing");
+    	var c = canvas.getContext("2d");
+
+        image.src = "http://uploads6.wikiart.org/images/leonardo-da-vinci/mona-lisa.jpg";
+
+        image.onload = function() {
+            c.fillStyle = "#eee";
+            c.fillRect(0, 0, 600, 400);
+
+            var ratio = image.width / image.height;
+            c.drawImage(image, 0, 0, 600 * ratio, 400);
+        };
+
+        var currentBrushStyle = {
+            color :     '#a7f', /* '#a7f', */
+            width :     25,
+            lineCap:    "round",
+            lineJoin:   "round",
+            
+            applyStyle: function(c) {
+                c.lineWidth = this.width;
+                c.strokeStyle = this.color;
+                c.lineCap = this.lineCap;
+                c.lineJoin = this.lineJoin;
+            }
+        };
+
+        currentBrushStyle.applyStyle(c);
+
+        var brush = {
+            startStroke: function(x, y) {
+                c.beginPath();
+                c.moveTo(x, y);
+
+                brush.stroke(x, y);
+            },
+            stroke: function(x, y) {
+                var dist = 1;
+                c.lineTo(x+dist, y+dist);  // Move 'dist' pixels diagonal south
+                c.stroke();
+                console.log(x, y);
+            },
+            strokeEnd: function() {
+            }
+        };
+
+        var drawing = false;
+
+        canvas.onmousedown = function(event) {
+        	var p = getMousePos(event);
+
+            brush.startStroke(p.x, p.y);
+            drawing = true;
+        };
+
+        canvas.onmousemove = function(event) {
+        	var p = getMousePos(event);
+
+            if (drawing) {
+                brush.stroke(p.x, p.y);
+            }
+        };
+
+        canvas.onmouseup = function(event) {
+            drawing = false;
+            brush.strokeEnd();
+    	};
+    	
+        var border = 0;
+
+		function getMousePos(event) {
+        	if (!event) { event = window.event; } // This is for IE's global window.event
+        	
+		    var r = canvas.getBoundingClientRect();
+        	var coords = {
+        		x : event.clientX - r.left - border,
+        		y : event.clientY - r.top - border
+        	};
+        	return coords;
+        }
+
+	</script>
+
+</body>
+</html>
+
+
