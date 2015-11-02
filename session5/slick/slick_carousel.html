@@ -1,0 +1,38 @@
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <style>
+
+  	.flower-carousel {
+  		width: 275px;
+  		background-color: lime;
+  	}
+
+  </style>
+  </head>
+  <body>
+
+  <div class="flower-carousel ">
+    <div><img src="../images/1.jpg"/></div>
+    <div><img src="../images/2.jpg"/></div>
+    <div><img src="../images/3.jpg"/></div>
+    <div><img src="../images/4.jpg"/></div>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.flower-carousel').slick({
+        // setting-name: setting-value
+      });
+    });
+  </script>
+
+  </body>
+</html>
