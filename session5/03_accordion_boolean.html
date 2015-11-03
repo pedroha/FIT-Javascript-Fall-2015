@@ -61,18 +61,23 @@
 	// Whenever we click on an <h1>, we want to slideUp() all the <p>
 	// and slideDown() the <p> right below the <h1> that was clicked
 
-	// $('p').hide();
+	$('p').hide();
 
 	$('h1').on('click', function() {
 
-		$('p').removeClass('active');
-		// Write code to slideUp() all the paragrahps
-
 		var $paragraph = $(this).closest('li').find('p');
-		$paragraph.addClass("active");
 
-		// Write code to slide down the corresponding paragraph
-		// $paragraph........
+		if ($paragraph.hasClass('active')) {
+			$('p').removeClass('active');
+			$('p').slideUp();
+		}
+		else {
+			$('p').removeClass('active');
+			$('p').slideUp();
+
+			$paragraph.addClass("active");
+			$paragraph.slideDown();
+		}
 	});
 
 </script>

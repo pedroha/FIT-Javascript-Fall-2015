@@ -67,12 +67,15 @@
 
 		$('p').removeClass('active');
 		// Write code to slideUp() all the paragrahps
+		$('p').slideUp();
 
 		var $paragraph = $(this).closest('li').find('p');
 		$paragraph.addClass("active");
 
 		// Write code to slide down the corresponding paragraph
 		// $paragraph........
+
+		$paragraph.slideDown();
 	});
 
 </script>

@@ -16,6 +16,7 @@
 
 	p {
 		background-color: lime;
+		display: none;
 	}
 
 	.active {
@@ -61,21 +62,40 @@
 	// Whenever we click on an <h1>, we want to slideUp() all the <p>
 	// and slideDown() the <p> right below the <h1> that was clicked
 
-	// $('p').hide();
+//	$('p').hide();
+
+	var deactivateAll = function() {
+		$('p').removeClass('active');
+		$('p').slideUp();
+	};
+
+	var activateLayer = function($layer) {
+		$layer.addClass("active");
+		$layer.slideDown();
+	};
 
 	$('h1').on('click', function() {
 
-		$('p').removeClass('active');
-		// Write code to slideUp() all the paragrahps
-
 		var $paragraph = $(this).closest('li').find('p');
-		$paragraph.addClass("active");
 
-		// Write code to slide down the corresponding paragraph
-		// $paragraph........
+		if ($paragraph.hasClass('active')) {
+			deactivateAll();
+		}
+		else {
+			deactivateAll();
+			activateLayer($paragraph);
+		}
 	});
 
 </script>
+
+
+
+
+
+
+
+
 
 
 
