@@ -35,6 +35,9 @@ FIT. CTD 612. Javascript. Fall 2015
   * [Bootstrap](http://getbootstrap.com/)
   * [Slick Carousel](http://kenwheeler.github.io/slick/)
 
-
-  http://api.jquery.com/jQuery.getJSON/
+### Ajax
+  * [getJSON](http://api.jquery.com/jQuery.getJSON/)
+  * [Giphy API](https://api.giphy.com/)
+  * [Discogs API](http://www.discogs.com/)
+  
 
