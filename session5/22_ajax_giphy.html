@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+ <style>
+ img {
+   height: 200px; float: left;
+ }
+ </style>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="images"></div>
+<script>
+
+  var giphyAPI = "http://api.giphy.com/v1/gifs/search";
+
+  $.getJSON( giphyAPI, {
+    q: 'funny cat',
+    api_key: 'dc6zaTOxFJmzC'
+  })
+  .done(function( data ) {
+
+    console.log(data);
+
+  });
+</script>
+</body>
+</html>

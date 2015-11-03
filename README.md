@@ -31,6 +31,10 @@ FIT. CTD 612. Javascript. Fall 2015
   * [Flow Chart](https://en.wikipedia.org/wiki/Flowchart)
 
 ### CSS/JS Frameworks
-  * [Foundation ZURB](http://foundation.zurb.com/)
+  * [Foundation ZURB](http://foundation.zurb.com/docs)
   * [Bootstrap](http://getbootstrap.com/)
+  * [Slick Carousel](http://kenwheeler.github.io/slick/)
+
+
+  http://api.jquery.com/jQuery.getJSON/
 
