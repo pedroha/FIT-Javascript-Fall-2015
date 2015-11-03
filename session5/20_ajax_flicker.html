@@ -18,16 +18,17 @@
   })
   .done(function( data ) {
 
+    $.each( data.items, function( i, item ) {
+      $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+      // if (i === 3) {
+      //   return false;
+      // }
+    });
+
     console.log(data);
 
     alert( JSON.stringify(data.items[0]) );
 
-    // $.each( data.items, function( i, item ) {
-    //   $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-    //   // if (i === 3) {
-    //   //   return false;
-    //   // }
-    // });
   });
 </script>
 </body>
