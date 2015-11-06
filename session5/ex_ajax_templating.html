@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+ <style>
+ img {
+   height: 200px; float: left;
+ }
+ </style>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<h1>Search images</h1>
+
+<p>
+   Search:
+   <input id="search-keywords" placeholder="Type keywords"></input>
+   <button id="search">Search</button>
+</p>
+
+<pre>
+1. Currently, the search is tied up to the 'funny cat' phrase, change it so that the phrase comes from the input 'search-keywords'
+
+2. Right now, it shows the still image version ('fixed_height_still'), change it to the animated version (that's what Giphy is famous for!)
+
+3. Make changes to the template, so that it conforms to the html for the slick carousel.
+
+4. Add the css/js to implement the slick carousel (refer to slick/slick_carousel.html)
+
+</pre>
+
+<div id="images"></div>
+
+
+<script>
+
+	var GIPHY_API = "http://api.giphy.com/v1/gifs/search";
+
+	var template = '<img src="$source">';
+
+	var searchKeywords = 'funny cat';
+
+	$.getJSON(GIPHY_API, {
+		q: searchKeywords,
+		api_key: 'dc6zaTOxFJmzC'
+	})
+	.done(function(json) {
+
+		console.log(json);
+		var data = json.data;
+
+		for (var i = 0; i < data.length; i++) {
+			var source = data[i]["images"]["fixed_height_still"]["url"];
+			console.log("Source:", source);
+
+			var imageTag = template.replace('$source', source);
+			$('#images').append(imageTag);
+		}
+	});
+</script>
+</body>
+</html>
+
