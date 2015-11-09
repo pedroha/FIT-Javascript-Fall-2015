@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio Loops</title>
+	<style>
+
+		body {
+			padding-top: 50px;
+		}
+
+		#buttons {
+			margin: auto;
+			width: 750px;
+		}
+
+		.piano {
+			width: 100px;
+			height: 50px;
+			border-radius: 10px;
+			background-color: hotpink;
+			font-size: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="buttons">
+		<button id="playA" class="piano">A</button>
+		<button id="playB" class="piano">B</button>
+		<button id="playC" class="piano">C</button>
+		<button id="playD" class="piano">D</button>
+		<button id="playE" class="piano">E</button>
+		<button id="playF" class="piano">F</button>
+		<button id="playG" class="piano">G</button>		
+	</div>
+
+	<script>
+
+		var context = new AudioContext();
+
+		for (var start = 440; start < 880; start += 440/12) {
+			console.log(start);
+		}
+/*
+for (var start = 440; start < 880; start += 440/12) { console.log(start); }
+
+A 440
+	476.6666666666667
+B 513.3333333333334
+	550
+C 586.6666666666666
+D 623.3333333333333
+	659.9999999999999
+E 696.6666666666665
+	733.3333333333331
+F 769.9999999999998
+	806.6666666666664
+G 843.333333333333
+A 879.9999999999997 
+
+
+*/
+		var Note = function(freq) {
+			this.freq = freq || 440;
+
+			this.play = function() {
+				if (this.oscillator) this.stop();				
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.start();
+			};
+
+			this.stop = function() {
+				if (this.oscillator) {
+					this.oscillator.disconnect(0);
+					this.oscillator = null;					
+				}
+			};
+		};
+
+		var A = new Note(440);
+		var B = new Note(513.3);
+		var C = new Note(586.6);
+		var D = new Note(623.3);
+		var E = new Note(696.6);
+		var F = new Note(770);
+		var G = new Note(843.3);
+		var A2 = new Note(880);
+
+
+		var a = document.getElementById('playA');
+		a.onmousedown = function() {
+			console.log("a");
+		};
+
+		a.onmouseup = function() {
+			console.log("a up");
+		};
+
+		// Complete for other keys
+
+	</script>
+	
+</body>
+</html>

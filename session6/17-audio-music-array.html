@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio Loops</title>
+	<style>
+
+		body {
+			padding-top: 50px;
+		}
+
+		#buttons {
+			margin: auto;
+			width: 750px;
+		}
+
+		.piano {
+			width: 100px;
+			height: 50px;
+			border-radius: 10px;
+			background-color: hotpink;
+			font-size: 20px;
+		}
+
+	</style>
+
+	<script src="../jquery.js"></script>
+</head>
+<body>
+
+	<div id="buttons">
+	</div>
+
+	<script>
+
+		var context = new AudioContext();
+
+		for (var start = 440; start < 880; start += 440/12) {
+			console.log(start);
+		}
+
+		var Note = function(freq) {
+			this.freq = freq || 440;
+			this.type = 0; // SINE
+
+			this.play = function() {
+				if (this.oscillator) this.stop();				
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.start();
+			};
+
+			this.stop = function() {
+				if (this.oscillator) {
+					this.oscillator.disconnect(0);
+					this.oscillator = null;					
+				}
+			};
+		};
+
+		var freqs = [440, 513.3, 586.6, 623.3, 696.6, 770, 843.3, 880];
+		var notes = [];
+
+		for (var i = 0; i < freqs.length; i++) {
+			notes.push(new Note(freqs[i]));
+		}
+
+		var piece = [1, 2, 3, 1, 1, 2, 3, 1, 3, 4, 5];
+		var duration = [500, 500, 500, 1000, 500, 500, 500, 1000, 500, 500, 1000];
+
+		var start = 0;
+
+		var play = function(idx, duration) {
+			setTimeout(function() {
+				notes[idx].play();
+			}, start);
+
+			setTimeout(function() {
+				notes[idx].stop();
+			}, start + duration);
+			start = start + duration;
+		};
+
+		for (i = 0; i < piece.length; i++) {
+			play(piece[i], duration[i]);
+		}
+
+	</script>
+	</script>
+	
+</body>
+</html>

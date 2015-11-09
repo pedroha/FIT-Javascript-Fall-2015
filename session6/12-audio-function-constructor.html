@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio Loops</title>
+
+</head>
+<body>
+
+	<script>
+
+		var context = new AudioContext();
+
+
+		for (var start = 440; start < 880; start += 440/12) {
+			console.log(start);
+		}
+/*
+for (var start = 440; start < 880; start += 440/12) { console.log(start); }
+
+A 440
+	476.6666666666667
+B 513.3333333333334
+	550
+C 586.6666666666666
+D 623.3333333333333
+	659.9999999999999
+E 696.6666666666665
+	733.3333333333331
+F 769.9999999999998
+	806.6666666666664
+G 843.333333333333
+A 879.9999999999997 
+
+*/
+		var Note = function(freq) {
+			this.freq = freq || 440;
+
+			this.play = function() {
+				if (this.oscillator) this.stop();				
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.start();
+			};
+
+			this.stop = function() {
+				if (this.oscillator) {
+					this.oscillator.disconnect(0);
+					this.oscillator = null;					
+				}
+			};
+		};
+
+		var A = new Note(440);
+		var B = new Note(513.3);
+		var C = new Note(586.6);
+		var D = new Note(623.3);
+		var E = new Note(696.6);
+		var F = new Note(770);
+		var G = new Note(843.3);
+		var A2 = new Note(880);
+
+
+
+		A.play();
+		setTimeout(function() {
+			A.stop();
+		}, 1000);
+
+		C.play();
+		setTimeout(function() {
+			C.stop();
+		}, 1000);
+
+	</script>
+	
+</body>
+</html>
