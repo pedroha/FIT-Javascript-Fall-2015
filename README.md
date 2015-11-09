@@ -35,7 +35,7 @@ FIT. CTD 612. Javascript. Fall 2015
   * [Bootstrap](http://getbootstrap.com/)
   * [Slick Carousel](http://kenwheeler.github.io/slick/)
 
-### HTML5 <canvas>
+### HTML5 canvas
   * [Mozilla's Canvas Tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
   
 
